@@ -17,7 +17,8 @@ sudo ovs-vsctl add-br br0
 
 # set controller
 
-sudo ovs-vsctl set-controller br0 $1
+CONTROLLERS=$(echo $1 | sed 's/,/ /g')
+sudo ovs-vsctl set-controller br0 $CONTROLLERS
 
 # set operation mode
 
