@@ -1,4 +1,4 @@
-# docker-host
+# Docker-Host
 Docker-based host environment with a single OVS switch
 
 # Instruction
