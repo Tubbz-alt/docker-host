@@ -6,7 +6,6 @@
 
 for i in $(seq 1 $1)
 do
-	#docker run -i -t -d --net=none --name host-$i ubuntu:14.04 /bin/bash
 	docker run -i -t -d --net=none --name host-$i host:0.1 /bin/bash
 done
 

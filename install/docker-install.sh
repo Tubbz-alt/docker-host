@@ -11,4 +11,4 @@ sudo apt-get install -y docker-engine
 sudo groupadd docker
 sudo usermod -aG docker $name
 
-echo "Log out and log back in."
+echo "Log out and log back in"
