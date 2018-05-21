@@ -6,7 +6,7 @@ sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C
 echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee --append /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo apt-get update
-sudo apt-get install -y docker-engine
+sudo apt-get install -y docker.io
 
 sudo groupadd docker
 sudo usermod -aG docker $name
