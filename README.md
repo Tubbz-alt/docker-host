@@ -1,7 +1,7 @@
 # docker-host
 Docker-based host environment with a single OVS switch
 
-# Introduction
+# Instruction
 1. Run step1.sh to install Docker and Open vSwitch
 
 	./step1.sh
