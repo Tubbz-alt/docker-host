@@ -17,3 +17,6 @@ Docker-based host environment with a single OVS switch
 	vi ~/docker-setup.sh
 
 4. Modify /etc/network/interface to set up the interfaces for the control and data plane
+
+# Requirement
+Optimized for Ubuntu 14.04
