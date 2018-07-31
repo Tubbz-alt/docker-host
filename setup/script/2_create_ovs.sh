@@ -27,7 +27,7 @@ sudo ovs-vsctl set-fail-mode br0 secure
 # set OpenFlow version
 
 sudo ovs-vsctl -- set bridge br0 protocols=$2
-sudo ovs-vsctl -- set bridge br0 other-config:datapath-id=0000000000000008
+#sudo ovs-vsctl -- set bridge br0 other-config:datapath-id=0000000000000001
 
 # add NICs
 
