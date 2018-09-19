@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ -z $1 ]; then
 	echo "cmd.sh [host ID]"
 else
