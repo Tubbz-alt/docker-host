@@ -2,7 +2,7 @@
 
 NETWORK=172.16.0
 START_IP=1
-END_IP=254
+END_IP=32
 
 CNT=0
 for i in $(seq $START_IP $END_IP)
