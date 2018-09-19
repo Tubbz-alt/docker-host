@@ -8,7 +8,7 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee --ap
 sudo apt-get update
 sudo apt-get install -y docker.io
 
-#sudo groupadd docker
-#sudo usermod -aG docker $name
+sudo groupadd docker
+sudo usermod -aG docker $name
 
 echo "Log out and log back in"
