@@ -22,9 +22,9 @@ PROTOCOL=OpenFlow10
 
 # Nothing / Target NICs
 NIC1=eth0
-NIC2=eth1
-NIC3=eth2
-NIC4=eth3
+NIC2=
+NIC3=
+NIC4=
 
 $DOCKER_HOME/script/2_create_ovs.sh $CONTROLLERS $PROTOCOL $NIC1 $NIC2 $NIC3 $NIC4
 
