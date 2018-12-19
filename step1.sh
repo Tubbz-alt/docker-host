@@ -9,9 +9,7 @@ install/docker-install.sh
 # manual setup
 
 echo
-echo "Some jobs that you need to do by yourself"
-echo
-echo "- Modify /etc/network/interfaces"
+echo "Now, you need to modify /etc/network/interfaces as follows"
 echo "   auto [Interface for the control plane]"
 echo "   iface [Interface] inet static"
 echo "       address [IP address used for connecting to the control plane]"
@@ -21,3 +19,6 @@ echo "       broadcast [Broadcast IP]"
 echo
 echo "   auto [Interface for the data plane]"
 echo "   iface [Interface] inet manual"
+echo
+echo "Then, please reboot the machine"
+echo
