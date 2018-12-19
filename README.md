@@ -17,6 +17,7 @@ Docker-based host environment with a single OVS switch
 	vi ~/docker-setup.sh
 
 5. Run docker-setup.sh
+
 	./docker-setup.sh
 
 # Requirement
