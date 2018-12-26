@@ -4,8 +4,8 @@
 
 cd image
 ./docker-img.sh
-cd ..
 
 # copy scripts to HOME
 
+cd ..
 cp setup/*.sh ~
