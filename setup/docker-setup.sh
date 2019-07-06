@@ -8,19 +8,19 @@ $DOCKER_HOME/docker-clean.sh
 
 # create new containers
 
-NUM_OF_DOCKERS=10
+NUM_OF_DOCKERS=32
 
 $DOCKER_HOME/script/1_run_docker.sh $NUM_OF_DOCKERS
 
 # create a new Open vSwitch bridge
 
 # Controller IP and port
-CONTROLLERS="tcp:192.168.0.11:6633,tcp:192.168.0.12:6633,tcp:192.168.0.13:6633"
+CONTROLLERS="tcp:192.168.0.21:6633,tcp:192.168.0.22:6633,tcp:192.168.0.23:6633"
 
 # OpenFlow10 / OpenFlow13
 PROTOCOL=OpenFlow10
 
-# Nothing / Target NICs
+# Nothing / Target NICs for the data plane
 NIC1=eth2
 NIC2=
 NIC3=
@@ -30,10 +30,10 @@ $DOCKER_HOME/script/2_create_ovs.sh $CONTROLLERS $PROTOCOL $NIC1 $NIC2 $NIC3 $NI
 
 # link all containers to the bridge
 
-# NETWORK(X.X.X).DOCKER($START_IP ~ $END_IP)
+# NETWORK(X.X.X).DOCKER($START_IP ~ $END_IP) for the data plane
 NETWORK=172.16.0
-START_IP=11
-END_IP=20
+START_IP=65
+END_IP=96
 CIDR=24
 GATEWAY=172.16.0.1
 

@@ -10,6 +10,7 @@ install/docker-install.sh
 
 echo
 echo "Now, you need to modify /etc/network/interfaces as follows"
+echo
 echo "   auto [Interface for the control plane]"
 echo "   iface [Interface] inet static"
 echo "       address [IP address used for connecting to the control plane]"
