@@ -21,4 +21,4 @@ Docker-based host environment with a single OVS switch
 	./docker-setup.sh
 
 # Requirement
-Optimized for Ubuntu 14.04
+Optimized for Ubuntu 14.04 and Ubuntu 16.04

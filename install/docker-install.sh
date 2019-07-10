@@ -1,14 +1,29 @@
 #!/bin/bash
 
-name=$(whoami)
+. /etc/os-release
 
-sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee --append /etc/apt/sources.list.d/docker.list > /dev/null
+# add the GPG key
+sudo apt-get install -y curl
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
+# add the Docker repository
+sudo apt-get install -y software-properties-common python-software-properties
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+# update repo
 sudo apt-get update
-sudo apt-get install -y docker.io
 
-sudo groupadd docker
-sudo usermod -aG docker $name
+# make sure we install Docker from the Docker repo instead of Ubuntu 16.04 repo
+sudo apt-cache policy docker-ce
+
+# install Docker
+if [ "$VERSION" == "16.04" ]; then
+    sudo apt-get install -y docker-ce=17.03.2~ce-0~ubuntu-xenial
+elif [ "$VERSION" == "14.04" ]; then
+    sudo apt-get install -y docker-ce=17.03.2~ce-0~ubuntu-trusty
+fi
+
+# bypass sudo to run the docker command
+sudo usermod -aG docker ${USER}
 
 echo "Log out and log back in"
