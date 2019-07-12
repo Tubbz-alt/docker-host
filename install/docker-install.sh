@@ -17,9 +17,9 @@ sudo apt-get update
 sudo apt-cache policy docker-ce
 
 # install Docker
-if [ "$VERSION" == "16.04" ]; then
+if [ "$VERSION_ID" == "16.04" ]; then
     sudo apt-get install -y docker-ce=17.03.2~ce-0~ubuntu-xenial
-elif [ "$VERSION" == "14.04" ]; then
+elif [ "$VERSION_ID" == "14.04" ]; then
     sudo apt-get install -y docker-ce=17.03.2~ce-0~ubuntu-trusty
 fi
 
